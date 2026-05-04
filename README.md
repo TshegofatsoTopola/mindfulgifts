@@ -1,3 +1,3 @@
 # mindfulgifts
-## Student Information
-## Project Overview
+# Student Information
+# Project Overview
