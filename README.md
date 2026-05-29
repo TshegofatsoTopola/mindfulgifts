@@ -35,3 +35,6 @@ Functionality
 Week 7-12
 • Fully functional and enhances user experience.
 Submission:
+
+# changelog 
+CSS file created 
