@@ -295,6 +295,69 @@
   .product-grid{grid-template-columns: 1fr;}
   .search-filters{flex-direction: column; align-items: strech;}
 }
+
+/* Lightbox overlay – covers the whole screen */
+.lightbox {
+    display: none;               /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+/* The enlarged image */
+.lightbox-content {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+/* Close button (X) */
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.lightbox-close:hover {
+    color: #F891BB;
+    transform: scale(1.2);
+}
+
+/* Caption under the image */
+#lightbox-caption {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* On small screens, adjust close button */
+@media (max-width: 600px) {
+    .lightbox-close {
+        top: 15px;
+        right: 25px;
+        font-size: 2rem;
+    }
+}
 </style>
     
 <!-------- HERO SECTION ------->
@@ -382,6 +445,13 @@
  </footer>
 </body>
 </html>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption"></div>
+</div>
 <script src="js/script.js"></script>
     </body>
 
