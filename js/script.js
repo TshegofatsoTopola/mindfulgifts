@@ -1,3 +1,5 @@
+
+<script>
 // Get the lightbox elements
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
@@ -34,17 +36,10 @@ document.addEventListener('keydown', function(e) {
 });
 
 // ---------- Attach lightbox to all product images ----------
-// This assumes your product images have a class like 'product-img' or you can target them differently.
-// Example 1: If you have images with class "product-image"
 document.querySelectorAll('.product-img img, .gallery-img').forEach(img => {
     img.addEventListener('click', function() {
         openLightbox(this.src, this.alt);
     });
 });
 
-// Example 2: If you use a generic selector, you can use this instead:
-// document.querySelectorAll('img[data-lightbox]').forEach(img => {
-//     img.addEventListener('click', function() {
-//         openLightbox(this.dataset.lightbox, this.alt);
-//     });
-// });
+</script>

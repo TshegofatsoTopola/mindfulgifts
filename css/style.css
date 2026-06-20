@@ -242,3 +242,21 @@
         font-size: 1.6rem;
       }
     }
+
+    .lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    user-select: none;
+}
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+.lightbox-prev:hover, .lightbox-next:hover {
+    background: rgba(241, 62, 147, 0.7);
+}
